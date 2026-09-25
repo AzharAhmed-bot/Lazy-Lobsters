@@ -52,6 +52,27 @@ Instead of storing or transmitting raw video, the system reasons over body keypo
 </tr>
 </table>
 
+## Hardware alert unit
+
+Alongside the software pipeline, a physical **ESP32 + buzzer + red/blue LED** box gives an on-site alert even if no one is looking at a screen — solid blue for normal activity, slow red blink for a controlled lie-down, and a fast red blink with pulsing buzzer for a confirmed fall or distress event. See [firmware/README.md](firmware/README.md) for the wiring diagram and flashing steps.
+
+<table>
+<tr>
+<td width="33%">
+<img src="devices/esp32.jpeg" alt="ESP32 DevKit board" width="100%">
+<p align="center"><sub><b>ESP32 DevKit</b> — driven over USB serial by the detector</sub></p>
+</td>
+<td width="33%">
+<img src="devices/components.jpeg" alt="Components laid out on a prototyping board" width="100%">
+<p align="center"><sub><b>Components</b> — ESP32, breadboard, buzzer, LEDs, resistors</sub></p>
+</td>
+<td width="33%">
+<img src="devices/connected-components.jpeg" alt="Wired alert circuit, blue LED lit" width="100%">
+<p align="center"><sub><b>Wired up</b> — blue LED lit for a normal (OK) state</sub></p>
+</td>
+</tr>
+</table>
+
 ## Getting started
 
 **Requirements:** Python 3.12, a webcam, and (on Linux) the `libgles2` system library for MediaPipe's GL context.
