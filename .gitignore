@@ -10,8 +10,11 @@ venv/
 pipenv/
 
 # auto-generated debug snapshots (hundreds of frames from --snap-every runs)
-# curated examples for the README live in docs/screenshots/ instead
 debugs/
+
+# README image assets (hardware photos, state screenshots) — not committed
+devices/
+docs/
 
 # web app
 node_modules/
