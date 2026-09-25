@@ -13,10 +13,9 @@ A webcam feed is run through a pose-estimation and posture-classification pipeli
 ```
 Webcam → YOLO posture model + MediaPipe pose keypoints → feature extraction
        → fall/distress state machine → alert (snapshot + log + webhook/ESP32)
-       → nurse dashboard
 ```
 
-Instead of storing or transmitting raw video, the system reasons over body keypoints and bounding-box geometry — velocity, torso angle, aspect ratio, motion — so no identifiable footage ever leaves the device. When a fall or distress event is confirmed, it saves an annotated snapshot, logs it, and pushes an alert (webhook / physical ESP32 buzzer+LED / JSON status API for the nurse dashboard) tagged with room ID and timestamp.
+Instead of storing or transmitting raw video, the system reasons over body keypoints and bounding-box geometry — velocity, torso angle, aspect ratio, motion — so no identifiable footage ever leaves the device. When a fall or distress event is confirmed, it saves an annotated snapshot, logs it, and pushes an alert (webhook / physical ESP32 buzzer+LED / JSON status API) tagged with room ID and timestamp.
 
 ### States it recognizes
 
@@ -90,23 +89,12 @@ python tests/test_detector.py
 
 **Manual live-camera test protocol:** see [TEST_PROTOCOL.md](TEST_PROTOCOL.md).
 
-### Nurse dashboard (optional)
-
-A React dashboard that polls the JSON status API lives in `web/nurse-app/`:
-
-```bash
-cd web/nurse-app
-npm install
-cp .env.example .env   # point VITE_FALL_API_BASE at the running detector
-npm run dev
-```
-
 ## Project layout
 
 ```
 src/            detection pipeline (pose, posture model, feature extraction, state machine, alerts)
 tests/          camera-free regression tests for the state machine
-web/            nurse-facing dashboard (React) and PHP status API
+web/            dashboard (React) and PHP status API
 firmware/       ESP32 buzzer/LED alert unit
 docs/           README assets
 project.md      problem framing, stakeholders, architecture (full write-up)
