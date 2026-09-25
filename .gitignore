@@ -1,0 +1,21 @@
+# runtime fall-alert evidence (patient snapshots — never commit)
+alerts/
+out.mp4
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+pipenv/
+
+# auto-generated debug snapshots (hundreds of frames from --snap-every runs)
+# curated examples for the README live in docs/screenshots/ instead
+debugs/
+
+# web app
+node_modules/
+.env
+
+# OS
+.DS_Store

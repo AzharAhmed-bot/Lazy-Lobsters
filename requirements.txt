@@ -1,0 +1,8 @@
+mediapipe
+opencv-python
+numpy<2
+ultralytics
+huggingface_hub
+flask
+flask-socketio
+pyserial

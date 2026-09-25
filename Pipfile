@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+flask-socketio = "*"
+mediapipe = "*"
+opencv-python = "*"
+numpy = "<2"
+ultralytics = "*"
+huggingface-hub = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
