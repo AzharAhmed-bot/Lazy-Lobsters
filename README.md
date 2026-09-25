@@ -1,6 +1,6 @@
 # Lazy Lobsters — Patient Fall Detection System
 
-Real-time, privacy-safe fall and distress detection for hospital wards, built by **Team Lazy Lobsters** (Malaika Lusamaki, Edouard Cossin, Azhar Ahmed) at the **SU-CESI Hackathon**.
+A real-time, privacy-safe fall and distress detection **prototype** for hospital wards, built by **Team Lazy Lobsters** (Malaika Lusamaki, Edouard Cossin, Azhar Ahmed) at the **SU-CESI Hackathon**. This is a hackathon proof of concept — it is not deployed in any actual ward.
 
 ## The problem
 
